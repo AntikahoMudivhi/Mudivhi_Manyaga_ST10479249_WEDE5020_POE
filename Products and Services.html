@@ -1,240 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pretoria Home Electronics | Products &amp; Services</title>
+    <title>Products and Services | Pretoria Home Electronics</title>
     <link rel="stylesheet" href="Style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-
-    <header>
-
-        <h1>Pretoria Home Electronics</h1>
-
-        <p>Quality Electronics for Your Home</p>
-
+    <header class="hero-header">
+        <div class="header-content">
+            <h1>Pretoria Home Electronics</h1>
+            <p>Quality Electronics for Your Home</p>
+        </div>
     </header>
 
+    <nav class="site-nav" aria-label="Main navigation">
 
-    <nav>
+        <button class="menu-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="nav-links">
+            ☰ Menu
+        </button>
 
-        <a href="index.html">Home</a> |
-
-        <a href="About Us.html">About Us</a> |
-
-        <a href="Products and Services.html">Products &amp; Services</a> |
-
-        <a href="Enquiry.html">Enquiry</a> |
-
-        <a href="Contact.html">Contact</a>
-
+        <div class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="About Us.html">About Us</a>
+            <a href="Products and Services.html">Products & Services</a>
+            <a href="Enquiry.html">Enquiry</a>
+            <a href="Contact.html">Contact</a>
+        </div>
     </nav>
 
+<main>
 
-    <main>
-
-        <section>
-
-            <h2>Our Products &amp; Services</h2>
-
-            <p>
-                Explore our range of household electronics and accessories.
-            </p>
-
-        </section>
-
-
-        <section>
-
-            <h2>Our Products</h2>
-
-            <table border="1">
-
-                <thead>
-
-                    <tr>
-                        <th>Product Category</th>
-                        <th>Examples</th>
-                        <th>Description</th>
-                        <th>Enquire</th>
-                    </tr>
-
-                </thead>
-
-
-                <tbody>
-
-                    <tr>
-
-                        <td>
-                            <strong>Televisions</strong><br><img src="Television.avif" alt="televission picture" width="300px" height="150px"></br>
-                        </td>
-
-                        <td>
-                            Smart TVs<br>
-                            LED TVs<br>
-                            Digital TVs
-                        </td>
-
-                        <td>
-                            Entertainment solutions for homes,
-                            bedrooms and living rooms.
-                        </td>
-
-                        <td>
-                            <a href="Enquiry.html">Enquire</a>
-                        </td>
-
-                    </tr>
-
-
-                    <tr>
-
-                        <td>
-                            <strong>Sound Systems</strong><br><img src="Sound System.jpg" alt="sound system picture" width="300px" height="150px"></br>
-                        </td>
-
-                        <td>
-                            Speakers<br>
-                            Home theatre systems<br>
-                            Bluetooth speakers
-                        </td>
-
-                        <td>
-                            Audio equipment for entertainment,
-                            music and home events.
-                        </td>
-
-                        <td>
-                            <a href="Enquiry.html">Enquire</a>
-                        </td>
-
-                    </tr>
-
-
-                    <tr>
-
-                        <td>
-                            <strong>Kitchen Appliances</strong><br><img src="Kitchen appliances.jpg" alt="Kitchen appliances picture" width="300px" height="150px"></br>
-                        </td>
-
-                        <td>
-                            Microwaves<br>
-                            Kettles<br>
-                            Toasters<br>
-                            Blenders
-                        </td>
-
-                        <td>
-                            Practical appliances designed to
-                            make everyday household tasks easier.
-                        </td>
-
-                        <td>
-                            <a href="Enquiry.html">Enquire</a>
-                        </td>
-
-                    </tr>
-
-
-                    <tr>
-
-                        <td>
-                            <strong>Accessories</strong><br><img src="Accessories.webp" alt="accessories picture" width="300px" height="150px"></br>
-                        </td>
-
-                        <td>
-                            Cables<br>
-                            Chargers<br>
-                            Remotes<br>
-                            Adaptors
-                        </td>
-
-                        <td>
-                            Useful accessories for maintaining
-                            and connecting electronic devices.
-                        </td>
-
-                        <td>
-                            <a href="Enquiry.html">Enquire</a>
-                        </td>
-
-                    </tr>
-
-                </tbody>
-
-            </table>
-
-        </section>
-
-
-        <section>
-
-            <h2>Our Services</h2>
-
-            <ol>
-
-                <li>Product enquiries</li>
-
-                <li>Product information and guidance</li>
-
-                <li>Customer support</li>
-
-                <li>Electronics product recommendations</li>
-
-                <li>Accessory enquiries</li>
-
-            </ol>
-
-        </section>
-
-
-        <section>
-
-            <h2>Can't Find What You're Looking For?</h2>
-
-            <p>
-                Contact us and tell us what product you need.
-                We will assist you with your enquiry.
-            </p>
-
-            <p>
-                <a href="Enquiry.html">Send an Enquiry</a>
-            </p>
-
-        </section>
-
-    </main>
-
-
-    <footer>
-
-        <h3>Pretoria Home Electronics (Pty) Ltd</h3>
-
+    <section class="page-intro">
+        <h2>Our Products & Services</h2>
         <p>
-            Pretoria, Gauteng, South Africa
+            Explore our range of quality and affordable electronics.
+            We offer products to make your home more comfortable,
+            convenient and enjoyable.
         </p>
+    </section>
 
-        <p>
-            Tel: 012 345 6789
+    <section class="products-section">
+        <h2>Our Products</h2>
+
+        <input
+            type="search"
+            id="product-search"
+            placeholder="Search for a product..."
+            aria-label="Search products"
+        >
+
+        <div class="product-grid">
+
+            <article class="product-card">
+                <img src="Television.avif"
+                    alt="Television products">
+                <h3>Televisions</h3>
+                <p>
+                    Discover televisions suitable for home
+                    entertainment, including Smart TVs, LED TVs
+                    and Digital TVs.
+                </p>
+                <a href="Enquiry.html?category=Television"
+                    class="product-button">Enquire Now</a>
+            </article>
+
+            <article class="product-card">
+                <img src="Sound System.jpg"
+                    alt="Sound system products">
+                <h3>Sound Systems</h3>
+                <p>
+                    Enjoy quality sound with speakers, home theatre
+                    systems and Bluetooth speakers.
+                </p>
+                <a href="Enquiry.html?category=Sound%20System"
+                    class="product-button">Enquire Now</a>
+            </article>
+
+            <article class="product-card">
+                <img src="Kitchen appliances.jpg"
+                    alt="Kitchen appliances">
+                <h3>Kitchen Appliances</h3>
+                <p>
+                    Find everyday kitchen appliances such as
+                    microwaves, kettles, toasters and blenders.
+                </p>
+                <a href="Enquiry.html?category=Kitchen%20Appliance"
+                    class="product-button">Enquire Now</a>
+            </article>
+
+            <article class="product-card">
+                <img src="Accessories.webp"
+                    alt="Electronic accessories">
+                <h3>Accessories</h3>
+                <p>
+                    Browse useful electronic accessories, including
+                    chargers, cables, remotes and adaptors.
+                </p>
+                <a href="Enquiry.html?category=Accessories"
+                    class="product-button">Enquire Now</a>
+            </article>
+
+        </div>
+
+        <p id="no-products" style="display: none;">
+            No matching products found. Please try another search.
         </p>
+    </section>
 
-        <p>
-            Email:
-            <a href="mailto:info@pretoriahomeelectronics.co.za">
-                info@pretoriahomeelectronics.co.za
-            </a>
-        </p>
+    <section class="services-section">
+        <h2>Our Services</h2>
 
-        <p>
-            &copy; 2026 Pretoria Home Electronics.
-        </p>
+        <div class="service-grid">
 
-    </footer>
+            <article class="service-card">
+                <h3>Product Enquiries</h3>
+                <p>
+                    Customers can contact us to ask about available
+                    products and product details.
+                </p>
+            </article>
+
+            <article class="service-card">
+                <h3>Product Information</h3>
+                <p>
+                    We provide useful information to help customers
+                    understand our electronic products.
+                </p>
+            </article>
+
+            <article class="service-card">
+                <h3>Customer Support</h3>
+                <p>
+                    We assist customers with questions and general
+                    product-related enquiries.
+                </p>
+            </article>
+
+            <article class="service-card">
+                <h3>Product Recommendations</h3>
+                <p>
+                    We help customers identify products that suit
+                    their needs and budgets.
+                </p>
+            </article>
+
+        </div>
+    </section>
+    <!-- Can't Find What You're Looking For Section -->
+
+<section class="help-section">
+    <h2>Can't Find What You're Looking For?</h2>
+
+    <p>
+        Contact us and tell us what product you need.
+        We will assist you with your enquiry.
+    </p>
+
+    <a href="Enquiry.html" class="help-button">
+        Send an Enquiry
+    </a>
+</section>
+
+</main>
+
+<footer>
+    <p>
+        &copy; <span class="current-year"></span>
+        Pretoria Home Electronics (Pty) Ltd.
+        All rights reserved.
+    </p>
+</footer>
 
 </body>
-
 </html>

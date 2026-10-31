@@ -6,31 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pretoria Home Electronics | Enquiry</title>
     <link rel="stylesheet" href="Style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
-    <header>
-
-        <h1>Pretoria Home Electronics</h1>
-
-        <p>Quality Electronics for Your Home</p>
-
+    <header class="hero-header">
+        <div class="header-content">
+            <h1>Pretoria Home Electronics</h1>
+            <p>Quality Electronics for Your Home</p>
+        </div>
     </header>
 
 
-    <nav>
+    <nav class="site-nav" aria-label="Main navigation">
 
-        <a href="index.html">Home</a> |
+        <button class="menu-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="nav-links">
+            ☰ Menu
+        </button>
 
-        <a href="About Us.html">About Us</a> |
-
-        <a href="Products and Services.html">Products &amp; Services</a> |
-
-        <a href="Enquiry.html">Enquiry</a> |
-
-        <a href="Contact.html">Contact</a>
-
+        <div class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="About Us.html">About Us</a>
+            <a href="Products and Services.html">Products & Services</a>
+            <a href="Enquiry.html">Enquiry</a>
+            <a href="Contact.html">Contact</a>
+        </div>
     </nav>
 
 
