@@ -22,8 +22,6 @@ body {
 
 /* ================= HEADER ================= */
 
-/* ================= HEADER WITH BLURRED BACKGROUND IMAGE ================= */
-
 header {
     position: relative;
     isolation: isolate;
