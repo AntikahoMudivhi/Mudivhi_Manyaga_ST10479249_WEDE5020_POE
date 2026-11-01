@@ -1,4 +1,4 @@
-Pretoria Home Electronics – Website Project
+Pretoria Home Electronics – Website Project.
 This project is about creating a website for Pretoria Home Electronics (Pty) Ltd, an electronics business based in Pretoria, South Africa. The website gives customers information about the business, its products and services, and how to contact the company.
 
 The aim of the website is to:
