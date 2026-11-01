@@ -1,8 +1,9 @@
-// Pretoria Home Electronics - Website JavaScript
+// WAIT FOR THE HTML PAGE TO LOAD
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Mobile navigation menu
+    // MOBILE NAVIGATION MENU
+
     const menuButton = document.querySelector(".menu-toggle");
     const navigation = document.querySelector(".nav-links");
 
@@ -10,23 +11,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
         menuButton.addEventListener("click", function () {
 
-            const isOpen = navigation.classList.toggle("is-open");
+            navigation.classList.toggle("open");
 
-            menuButton.setAttribute("aria-expanded", String(isOpen));
+            const isOpen = navigation.classList.contains("open");
 
-            menuButton.textContent = isOpen ? "✕ Close" : "☰ Menu";
+            menuButton.setAttribute("aria-expanded", isOpen);
 
         });
 
-        navigation.querySelectorAll("a").forEach(function (link) {
+        // CLOSE MENU AFTER CLICKING A LINK
+
+        const navigationLinks = navigation.querySelectorAll("a");
+
+        navigationLinks.forEach(function (link) {
 
             link.addEventListener("click", function () {
 
-                navigation.classList.remove("is-open");
-
+                navigation.classList.remove("open");
                 menuButton.setAttribute("aria-expanded", "false");
-
-                menuButton.textContent = "☰ Menu";
 
             });
 
@@ -34,71 +36,108 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-    // Automatically update the copyright year
-    document.querySelectorAll(".current-year").forEach(function (element) {
 
-        element.textContent = new Date().getFullYear();
+    // PRODUCT SEARCH FUNCTION
 
-    });
-
-    // Product search and filtering
-    const searchInput = document.querySelector("#product-search");
+    const searchInput = document.getElementById("product-search");
     const productCards = document.querySelectorAll(".product-card");
-    const noProductsMessage = document.querySelector("#no-products");
+    const searchMessage = document.getElementById("search-message");
 
     if (searchInput && productCards.length > 0) {
 
         searchInput.addEventListener("input", function () {
 
-            const searchTerm = searchInput.value.toLowerCase().trim();
+            const searchText = searchInput.value.toLowerCase().trim();
 
-            let visibleCount = 0;
+            let visibleProducts = 0;
 
             productCards.forEach(function (card) {
 
-                const searchableText =
-                    (card.textContent + " " + card.dataset.search).toLowerCase();
+                const productName = card.dataset.product.toLowerCase();
+                const productText = card.textContent.toLowerCase();
 
-                const matches = searchableText.includes(searchTerm);
+                const matches =
+                    productName.includes(searchText) ||
+                    productText.includes(searchText);
 
                 card.hidden = !matches;
 
                 if (matches) {
-                    visibleCount++;
+                    visibleProducts++;
                 }
 
             });
 
-            if (noProductsMessage) {
-                noProductsMessage.hidden = visibleCount !== 0;
+            if (searchMessage) {
+
+                if (visibleProducts === 0) {
+                    searchMessage.textContent = "No products found. Please try another search.";
+                } else {
+                    searchMessage.textContent =
+                        visibleProducts + " product category/categories found.";
+                }
+
             }
 
         });
 
     }
 
-    // Automatically select the product on the enquiry page
-    const productSelect = document.querySelector("#product");
 
-    if (productSelect) {
+    // AUTOMATIC PRODUCT CATEGORY SELECTION
 
-        const requestedCategory =
-            new URLSearchParams(window.location.search).get("category");
+    const categorySelect = document.getElementById("category");
 
-        if (requestedCategory) {
+    if (categorySelect) {
 
-            const matchingOption = Array.from(productSelect.options).find(
+        const pageParameters = new URLSearchParams(window.location.search);
+        const selectedCategory = pageParameters.get("category");
+
+        if (selectedCategory) {
+
+            const matchingOption = Array.from(categorySelect.options).find(
                 function (option) {
-                    return option.value.toLowerCase() === requestedCategory.toLowerCase();
+                    return option.value.toLowerCase() === selectedCategory.toLowerCase();
                 }
             );
 
             if (matchingOption) {
-                productSelect.value = matchingOption.value;
+                categorySelect.value = matchingOption.value;
             }
 
         }
 
     }
+
+
+    // ENQUIRY FORM VALIDATION
+
+    const enquiryForm = document.getElementById("enquiry-form");
+
+    if (enquiryForm) {
+
+        enquiryForm.addEventListener("submit", function (event) {
+
+            if (!enquiryForm.checkValidity()) {
+
+                event.preventDefault();
+                enquiryForm.reportValidity();
+
+            }
+
+        });
+
+    }
+
+
+    // AUTOMATIC COPYRIGHT YEAR
+
+    const yearElements = document.querySelectorAll(".current-year");
+
+    yearElements.forEach(function (element) {
+
+        element.textContent = new Date().getFullYear();
+
+    });
 
 });

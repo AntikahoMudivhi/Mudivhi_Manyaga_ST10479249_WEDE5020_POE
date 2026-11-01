@@ -1,270 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pretoria Home Electronics | Contact Us</title>
+    <meta name="description" content="Contact Pretoria Home Electronics for product enquiries and customer support.">
+    <title>Pretoria Home Electronics | Contact</title>
     <link rel="stylesheet" href="Style.css">
     <script src="script.js" defer></script>
 </head>
-
 <body>
 
-    <header class="hero-header">
-        <div class="header-content">
-           <h1>Pretoria Home Electronics</h1>
-           <p>Quality Electronics for Your Home</p>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header>
+    <h1>Pretoria Home Electronics</h1>
+    <p>Quality Electronics for Your Home</p>
+</header>
+
+<nav aria-label="Main navigation">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu">☰ Menu</button>
+    <div class="nav-links" id="main-menu">
+        <a href="index.html">Home</a>
+        <a href="About Us.html">About Us</a>
+        <a href="Products and Services.html">Products &amp; Services</a>
+        <a href="Enquiry.html">Enquiry</a>
+        <a href="Contact.html" aria-current="page">Contact</a>
+    </div>
+</nav>
+
+<main id="main-content">
+
+    <section class="welcome-section">
+        <h2>Contact Us</h2>
+        <p>We are happy to assist you with your questions and product enquiries.</p>
+    </section>
+
+    <section>
+        <h2>Get in Touch</h2>
+
+        <div class="contact-card">
+            <h3>General Enquiries</h3>
+            <p><strong>Telephone:</strong> <a href="tel:0123456789">012 345 6789</a></p>
+            <p><strong>Email:</strong> <a href="mailto:info@pretoriahomeelectronics.co.za">info@pretoriahomeelectronics.co.za</a></p>
         </div>
-    </header>
 
-    <nav class="site-nav" aria-label="Main navigation">
-
-        <button class="menu-toggle"
-                type="button"
-                aria-expanded="false"
-                aria-controls="nav-links">
-            ☰ Menu
-        </button>
-
-        <div class="nav-links" id="nav-links">
-            <a href="index.html">Home</a>
-            <a href="About Us.html">About Us</a>
-            <a href="Products and Services.html">Products & Services</a>
-            <a href="Enquiry.html">Enquiry</a>
-            <a href="Contact.html">Contact</a>
+        <div class="contact-card">
+            <h3>Customer Support</h3>
+            <p><strong>Telephone:</strong> <a href="tel:0124567890">012 456 7890</a></p>
+            <p><strong>Email:</strong> <a href="mailto:support@pretoriahomeelectronics.co.za">support@pretoriahomeelectronics.co.za</a></p>
         </div>
-    </nav>
-
-
-    <main>
-
-        <section>
-
-            <h2>Contact Pretoria Home Electronics</h2>
-
-            <p>
-                We would be happy to hear from you.
-                Contact us using the information below.
-            </p>
-
-        </section>
-
-
-        <section>
-
-            <h2>Pretoria Branch</h2>
-
-            <p>
-                <strong>Address:</strong><br>
-                123 Church Street<br>
-                Pretoria Central<br>
-                Pretoria<br>
-                Gauteng<br>
-                South Africa
-            </p>
-
-            <p>
-                <strong>Telephone:</strong><br>
-                012 345 6789
-            </p>
-
-            <p>
-                <strong>Email:</strong><br>
-
-                <a href="mailto:info@pretoriahomeelectronics.co.za">
-                    info@pretoriahomeelectronics.co.za
-                </a>
-            </p>
-
-        </section>
-
-
-        <section>
-
-            <h2>Centurion Service Point</h2>
-
-            <p>
-                <strong>Address:</strong><br>
-                45 Hendrik Verwoerd Drive<br>
-                Centurion<br>
-                Gauteng<br>
-                South Africa
-            </p>
-
-            <p>
-                <strong>Telephone:</strong><br>
-                012 456 7890
-            </p>
-
-            <p>
-                <strong>Email:</strong><br>
-
-                <a href="mailto:support@pretoriahomeelectronics.co.za">
-                    support@pretoriahomeelectronics.co.za
-                </a>
-            </p>
-
-        </section>
-
-
-        <section>
-
-            <h2>Opening Hours</h2>
-
-            <table border="1">
-
-                <thead>
-
-                    <tr>
-                        <th>Day</th>
-                        <th>Opening Hours</th>
-                    </tr>
-
-                </thead>
-
-                <tbody>
-
-                    <tr>
-                        <td>Monday – Friday</td>
-                        <td>08:00 – 17:00</td>
-                    </tr>
-
-                    <tr>
-                        <td>Saturday</td>
-                        <td>09:00 – 14:00</td>
-                    </tr>
-
-                    <tr>
-                        <td>Sunday</td>
-                        <td>Closed</td>
-                    </tr>
-
-                </tbody>
-
-            </table>
-
-        </section>
-
-
-        <section>
-
-            <h2>Send Us a Message</h2>
-
-            <form action="mailto:info@pretoriahomeelectronics.co.za"
-                  method="post"
-                  enctype="text/plain">
-
-                <p>
-
-                    <label for="contactname">
-                        <strong>Name:</strong>
-                    </label>
-
-                    <br>
-
-                    <input type="text"
-                           id="contactname"
-                           name="Name"
-                           required>
-
-                </p>
-
-
-                <p>
-
-                    <label for="contactemail">
-                        <strong>Email:</strong>
-                    </label>
-
-                    <br>
-
-                    <input type="email"
-                           id="contactemail"
-                           name="Email"
-                           required>
-
-                </p>
-
-
-                <p>
-
-                    <label for="contactmessage">
-                        <strong>Message:</strong>
-                    </label>
-
-                    <br>
-
-                    <textarea id="contactmessage"
-                              name="Message"
-                              rows="7"
-                              cols="42"
-                              required></textarea>
-
-                </p>
-
-
-                <p>
-
-                    <input type="submit"
-                           value="Send Message">
-
-                    <input type="reset"
-                           value="Clear">
-
-                </p>
-
-            </form>
-
-        </section>
-
-
-        <section>
-
-            <h2>Visit or Contact Us Today</h2>
-
-            <p>
-                Our team is ready to assist you with your
-                electronics enquiries.
-            </p>
-
-            <p>
-                <a href="Enquiry.html">
-                    Make an Enquiry
-                </a>
-            </p>
-
-        </section>
-
-    </main>
-
-
-    <footer>
-
-        <h3>Pretoria Home Electronics (Pty) Ltd</h3>
-
-        <p>
-            Pretoria, Gauteng, South Africa
-        </p>
-
-        <p>
-            Tel: 012 345 6789
-        </p>
-
-        <p>
-            Email:
-            <a href="mailto:info@pretoriahomeelectronics.co.za">
-                info@pretoriahomeelectronics.co.za
-            </a>
-        </p>
-
-        <p>
-            &copy; 2026 Pretoria Home Electronics.
-            All Rights Reserved.
-        </p>
-
-    </footer>
+    </section>
+
+    <section>
+        <h2>Our Locations</h2>
+
+        <div class="contact-card">
+            <h3>Pretoria Branch</h3>
+            <p>Pretoria, Gauteng, South Africa</p>
+        </div>
+
+        <div class="contact-card">
+            <h3>Pretoria Service Point</h3>
+            <p>Pretoria, Gauteng, South Africa</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Business Hours</h2>
+
+        <table class="business-hours">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Opening Hours</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday - Friday</td>
+                    <td>08:00 - 17:00</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>09:00 - 14:00</td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td>Closed</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="call-to-action">
+        <h2>Send Us an Enquiry</h2>
+        <p>Would you like to know more about our products?</p>
+        <a class="button-link" href="Enquiry.html">Complete Enquiry Form</a>
+    </section>
+
+</main>
+
+<footer>
+    <h3>Pretoria Home Electronics (Pty) Ltd</h3>
+    <h3>Find Our Location</h3>
+
+<div class="map-container">
+    <iframe
+        src="https://maps.google.com/maps?q=265%20Pretorius%20St%2C%20Pretoria%20Central%2C%20Pretoria%2C%200002&t=&z=16&ie=UTF8&iwloc=&output=embed"
+        width="100%"
+        height="350"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+    </iframe>
+</div>
+    <p>265 Pretorius St, Pretoria Central, Pretoria, 0002</p>
+    <p>Tel: 012 345 6789</p>
+    <p>Email: <a href="mailto:info@pretoriahomeelectronics.co.za">info@pretoriahomeelectronics.co.za</a></p>
+    <p>&copy; <span class="current-year">2026</span> Pretoria Home Electronics. All Rights Reserved.</p>
+    <p>Disclaimer: This website is a mock student project designed for educational use. The featured business is fictional, and its association with this corporate property is purely for simulation purposes.</p>
+</footer>
 
 </body>
-
 </html>

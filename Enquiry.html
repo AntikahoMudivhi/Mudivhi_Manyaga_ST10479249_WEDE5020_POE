@@ -1,232 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Send a product enquiry to Pretoria Home Electronics.">
     <title>Pretoria Home Electronics | Enquiry</title>
     <link rel="stylesheet" href="Style.css">
     <script src="script.js" defer></script>
 </head>
-
 <body>
 
-    <header class="hero-header">
-        <div class="header-content">
-            <h1>Pretoria Home Electronics</h1>
-            <p>Quality Electronics for Your Home</p>
-        </div>
-    </header>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
+<header>
+    <h1>Pretoria Home Electronics</h1>
+    <p>Quality Electronics for Your Home</p>
+</header>
 
-    <nav class="site-nav" aria-label="Main navigation">
+<nav aria-label="Main navigation">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu">☰ Menu</button>
+    <div class="nav-links" id="main-menu">
+        <a href="index.html">Home</a>
+        <a href="About Us.html">About Us</a>
+        <a href="Products and Services.html">Products &amp; Services</a>
+        <a href="Enquiry.html" aria-current="page">Enquiry</a>
+        <a href="Contact.html">Contact</a>
+    </div>
+</nav>
 
-        <button class="menu-toggle"
-                type="button"
-                aria-expanded="false"
-                aria-controls="nav-links">
-            ☰ Menu
-        </button>
+<main id="main-content">
 
-        <div class="nav-links" id="nav-links">
-            <a href="index.html">Home</a>
-            <a href="About Us.html">About Us</a>
-            <a href="Products and Services.html">Products & Services</a>
-            <a href="Enquiry.html">Enquiry</a>
-            <a href="Contact.html">Contact</a>
-        </div>
-    </nav>
+    <section class="welcome-section">
+        <h2>Product Enquiry</h2>
+        <p>Interested in one of our products? Complete the form below and send us your enquiry.</p>
+    </section>
 
+    <section class="form-section">
+        <h2>Enquiry Form</h2>
 
-    <main>
+        <form id="enquiry-form"
+              action="mailto:info@pretoriahomeelectronics.co.za"
+              method="post"
+              enctype="text/plain">
 
-        <section>
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="Full Name"
+                   placeholder="Enter your full name" required>
 
-            <h2>Product Enquiry</h2>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="Email"
+                   placeholder="Enter your email address" required>
 
-            <p>
-                Complete the form below to enquire about a
-                product or service.
-            </p>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="Phone"
+                   placeholder="Enter your phone number"
+                   pattern="[0-9+() -]{7,20}" required>
 
-        </section>
+            <label for="category">Product Category:</label>
+            <select id="category" name="Product Category" required>
+                <option value="">Select a category</option>
+                <option value="Televisions">Televisions</option>
+                <option value="Sound Systems">Sound Systems</option>
+                <option value="Kitchen Appliances">Kitchen Appliances</option>
+                <option value="Accessories">Accessories</option>
+                <option value="Other">Other</option>
+            </select>
 
+            <label for="budget">Your Budget:</label>
+            <select id="budget" name="Budget" required>
+                <option value="">Select your budget</option>
+                <option value="Under R1000">Under R1000</option>
+                <option value="R1000-R3000">R1000 - R3000</option>
+                <option value="R3000-R5000">R3000 - R5000</option>
+                <option value="Above R5000">Above R5000</option>
+            </select>
 
-        <section>
+            <label for="message">Your Enquiry:</label>
+            <textarea id="message" name="Message" rows="6"
+                      placeholder="Tell us which product you are interested in..."
+                      required></textarea>
 
-            <h2>Enquiry Form</h2>
+            <div class="form-buttons">
+                <button type="submit" class="submit-button">Send Enquiry</button>
+                <button type="reset" class="reset-button">Clear Form</button>
+            </div>
 
-            <form action="mailto:info@pretoriahomeelectronics.co.za"
-                  method="post"
-                  enctype="text/plain">
+        </form>
 
-                <p>
-                    <label for="name">
-                        <strong>Full Name:</strong>
-                    </label>
-                    <br>
-
-                    <input type="text"
-                           id="name"
-                           name="Full Name"
-                           required>
-                </p>
-
-
-                <p>
-                    <label for="email">
-                        <strong>Email Address:</strong>
-                    </label>
-                    <br>
-
-                    <input type="email"
-                           id="email"
-                           name="Email"
-                           required>
-                </p>
-
-
-                <p>
-                    <label for="phone">
-                        <strong>Phone Number:</strong>
-                    </label>
-                    <br>
-
-                    <input type="tel"
-                           id="phone"
-                           name="Phone Number"
-                           required>
-                </p>
-
-
-                <p>
-                    <label for="product">
-                        <strong>Product Category:</strong>
-                    </label>
-                    <br>
-
-                    <select id="product"
-                            name="Product Category">
-
-                        <option value="Television">
-                            Television
-                        </option>
-
-                        <option value="Sound System">
-                            Sound System
-                        </option>
-
-                        <option value="Kitchen Appliance">
-                            Kitchen Appliance
-                        </option>
-
-                        <option value="Accessories">
-                            Accessories
-                        </option>
-
-                        <option value="Other">
-                            Other
-                        </option>
-
-                    </select>
-                </p>
-
-
-                <p>
-                    <label for="budget">
-                        <strong>Budget Range:</strong>
-                    </label>
-                    <br>
-
-                    <select id="budget"
-                            name="Budget">
-
-                        <option value="Under R1000">
-                            Under R1,000
-                        </option>
-
-                        <option value="R1000-R3000">
-                            R1,000 – R3,000
-                        </option>
-
-                        <option value="R3000-R5000">
-                            R3,000 – R5,000
-                        </option>
-
-                        <option value="Above R5000">
-                            Above R5,000
-                        </option>
-
-                    </select>
-                </p>
-
-
-                <p>
-                    <label for="message">
-                        <strong>Your Enquiry:</strong>
-                    </label>
-                    <br>
-
-                    <textarea id="message"
-                              name="Enquiry"
-                              rows="8"
-                              cols="42"
-                              placeholder="Tell us what product you are looking for..."
-                              required></textarea>
-                </p>
-
-
-                <p>
-
-                    <input type="submit"
-                           value="Submit Enquiry">
-
-                    <input type="reset"
-                           value="Clear Form">
-
-                </p>
-
-            </form>
-
-        </section>
-
-
-        <section>
-
-            <h2>Prefer to Contact Us Directly?</h2>
-
-            <p>
-                <strong>Phone:</strong>
-                012 345 6789
-            </p>
-
-            <p>
-                <strong>Email:</strong>
-
-                <a href="mailto:info@pretoriahomeelectronics.co.za">
-                    info@pretoriahomeelectronics.co.za
-                </a>
-            </p>
-
-        </section>
-
-    </main>
-
-
-    <footer>
-
-        <h3>Pretoria Home Electronics (Pty) Ltd</h3>
-
-        <p>
-            Pretoria, Gauteng, South Africa
+        <p class="form-note">
+            Your email application may open when you submit this form.
+            Please check the message and send it from your email application.
         </p>
+    </section>
 
-        <p>
-            &copy; 2026 Pretoria Home Electronics.
-        </p>
+    <section>
+        <h2>Need Assistance?</h2>
+        <p>If you need help choosing a product, contact our team for assistance.</p>
+        <a class="button-link" href="Contact.html">Contact Us</a>
+    </section>
 
-    </footer>
+</main>
+
+<footer>
+    <h3>Pretoria Home Electronics (Pty) Ltd</h3>
+    <h3>Find Our Location</h3>
+
+<div class="map-container">
+    <iframe
+        src="https://maps.google.com/maps?q=265%20Pretorius%20St%2C%20Pretoria%20Central%2C%20Pretoria%2C%200002&t=&z=16&ie=UTF8&iwloc=&output=embed"
+        width="100%"
+        height="350"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+    </iframe>
+</div>
+    <p>265 Pretorius St, Pretoria Central, Peroria, 0002</p>
+    <p>South Africa</p>
+    <p>Tel: 012 345 6789</p>
+    <p>Email: <a href="mailto:info@pretoriahomeelectronics.co.za">info@pretoriahomeelectronics.co.za</a></p>
+    <p>&copy; <span class="current-year">2026</span> Pretoria Home Electronics. All Rights Reserved.</p>
+    <p>Disclaimer: This website is a mock student project designed for educational use. The featured business is fictional, and its association with this corporate property is purely for simulation purposes.</p>
+</footer>
 
 </body>
-
 </html>
